@@ -1,0 +1,23 @@
+<header id="main-header">
+    <!-- Web Developer Essentials -->
+    <% if(locals.isAdmin) { %>
+        <div id="logo"><a href="/admin/products">WDE</a></div>
+    <% } %>
+    <% if(!locals.isAdmin) { %>
+        <div id="logo"><a href="/">Vithal's shop</a></div>
+    <% } %>
+    <nav>
+        <%- include('nav-items') %>
+    </nav>
+    <button id="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<aside id="mobile-menu">
+    <nav>
+        <%- include('nav-items') %>
+    </nav>
+</aside>
